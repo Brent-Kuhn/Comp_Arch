@@ -1,0 +1,25 @@
+# Author: Brent Kuhn
+# Date: 08/31/2018
+# loop15.asm--A program that loops from 0 to 15
+# Registers used:
+#  $r1 -used to hold th couting number.
+#  $r2 -used to hold the exit number.
+#  $r3 -used to hold the sum of the $t1 and $t2.
+#  $v0 -syscall parameter and return value.
+#  $a0 -syscall parameter.
+.data
+# Create the newline variable to print later
+newline: .asciiz "\n"
+.text
+main: # Start execution at main
+addi $r2, 15, 0
+L1: bge $r1, $r2, EXIT
+add &r1, 1, $r1
+## Print out $r2.
+move $a0, $r2 # Move $r2 into $a0 for printing
+li $v0, 1 # Print int
+syscall
+li $v0, 4 # Print string
+la $a0, newline # load address of the newline
+syscall
+j L1
