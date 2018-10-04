@@ -20,24 +20,18 @@ main:
 	la $a0, string 		#load and print "you wrote" string
 	li $v0, 4
 	syscall
-
-	#li $v0, 4         
-	#la $a0, ($s1) 		#load and print your string ==> can replace ($t1) with userString
-        #syscall
 	
 	la $t1, userString	#load the base address of the string into t1
 	la $t2, userString
-	#move $a0, $t2
-	#li $v0, 11		#print the current character
-	#syscall
 	
+	li $s3, 0		#pre-load 0 into s3 to avoid memory leaks
 	
 checkWord:
 	li $s2, 1 		#assume the word is a hex word
 	
 	countWord:
 		lb $t3, 0($t2)		#load the first byte of the string
-		beq $t3, 0, exit	#if zero is found in the register, you are out of the string, so exit
+		beq $t3, 0, printString	#if zero is found in the register, you are out of the string, so exit
 		beq $t3, '.', continue	#if t3 is a period, then the word is over, and check for state
 		beq $t3, ' ', continue	#if t3 is a space, then the word is over, and check for state
 		bgt $t3, 'F', notHex	#if t3 is not a hex, flip the flag and keep counting
@@ -52,7 +46,7 @@ checkWord:
 	
 	continue:
 		lb $t3, 0($t1)		#load byte of the first char in the previously read string
-		beq $t3, '.', exit	#if t2 is a period, then exit
+		beq $t3, '.', printString	#if t2 is a period, then exit
 		add $t2, $t2, 1		#incrament t2 to avoid circular logic of spaces
 		beq $s2, 0, keepWord	#if t5 is zero then it was not a hex word
 		beq $s2, 1, replaceWord	#if t5 is one then it was a hex word
@@ -93,16 +87,18 @@ replaceWord:
 		ble $t4, $s3, noNewMax
 		move $s3, $t4
 		
-		noNewHex:
+		noNewMax:
 			li $t4, 0		#clean out t4
 			addi $t1, $t1, 1	#move t1 to the next byte
 			li $v0, 11		#print the space or period
 			move $a0, $t3
 			syscall
 			j countWord		#start checking the next word
-exit:
+printString:
 	#branch if the conditions are met for string printing
 	#print the proper string
-	#Exit the program 
-	li $v0, 10
-	syscall
+	
+	exit:
+		#Exit the program 
+		li $v0, 10
+		syscall
