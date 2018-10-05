@@ -9,7 +9,8 @@
 # $t3: Used to hold a single character for checking/printing/converting
 
 .data
-string: .asciiz "Your string: "
+prompt: .asciiz "Please input your string: "
+string: .asciiz "Your converted string: "
 newline: .asciiz "\n"
 userString: .space 200
 sparse: .asciiz "\nSparse"
@@ -18,6 +19,10 @@ plentiful: .asciiz "\nPlentiful"
 
 .text
 main:
+	la $a0, prompt	#print prompt
+	li $v0, 4
+	syscall
+	
 	li $v0, 8 		#take in input
 	la $a0, userString 	#load byte space into address
 	addi $a1, $zero, 200
