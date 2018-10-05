@@ -7,6 +7,9 @@
 string: .asciiz "Your string: "
 newline: .asciiz "\n"
 userString: .space 200
+sparse: .asciiz "\nSparse"
+intermediate: .asciiz "\nIntermediate"
+plentiful: .asciiz "\nPlentiful"
 
 .text
 main:
@@ -97,6 +100,24 @@ replaceWord:
 printString:
 	#branch if the conditions are met for string printing
 	#print the proper string
+	ble $s3, 255, printSparse
+	ble $s3, 65535, printInter
+	li $v0, 4
+	la $a0, plentiful
+	syscall
+	j exit
+	
+	printSparse:
+		li $v0, 4
+		la $a0, sparse
+		syscall
+		j exit
+	
+	printInter:
+		li $v0, 4
+		la $a0, intermediate
+		syscall
+		j exit
 	
 	exit:
 		#Exit the program 
