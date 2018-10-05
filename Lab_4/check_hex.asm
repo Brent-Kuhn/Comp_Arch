@@ -1,7 +1,12 @@
 # Brent Kuhn --09/21/2018
 # check_hex.asm -- check to see if a word is composed of hex chars
 # Registers used:
-
+# $s1: saves the string for user input
+# $s2: Used to keep as a "flag" for the current word
+# $s3: Used to keep the count of the largest hex word
+# $t1: Used as a "crawling" pointer to find the end of a word
+# $t2: Used as a "crawling" pointer to move through word to print or convert
+# $t3: Used to hold a single character for checking/printing/converting
 
 .data
 string: .asciiz "Your string: "
