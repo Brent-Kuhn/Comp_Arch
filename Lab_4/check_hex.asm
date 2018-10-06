@@ -61,8 +61,8 @@ checkWord:
 		lb $t3, 0($t1)		#load byte of the first char in the previously read string
 		beq $t3, '.', printString	#if t2 is a period, then exit
 		add $t2, $t2, 1		#incrament t2 to avoid circular logic of spaces
-		beq $s2, 0, keepWord	#if t5 is zero then it was not a hex word
-		beq $s2, 1, replaceWord	#if t5 is one then it was a hex word
+		beq $s2, 0, keepWord	#if s2 is zero then it was not a hex word
+		beq $s2, 1, replaceWord	#if s2 is one then it was a hex word
 		
 		#add $t3, $t3, 1		#increase t3 by one byte
 
