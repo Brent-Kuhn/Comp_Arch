@@ -51,7 +51,8 @@ li $v0, 4
 syscall
 
 #move the result from QuadBitFloor into a0
-move $a0, $s2
+move $a0, $s0
+move $a1, $s1
 jal PackedDigitCipher
 
 li $v0, 10
@@ -76,7 +77,7 @@ QuadBitFloor:
 		j whileQBF
 	
 	exitStack:
-	#pull the return address from the stack
+	#pop the return address from the stack
 	lw $ra, 0($sp)
 	addi $sp, $sp, 4
 	jr $ra  #return to the jal + 4 instruction
@@ -96,18 +97,35 @@ PackedDigitCipher:
 	beqz $t1, exitPDCStack
 		and $t3, $t0, $t1		#and with the bitmask and store it into t3
 		srlv $t3, $t3, $t2		#shift t3 right by t2's value
-		la $t4, array
+		la $t4, array			#load the base address of the array
 		add $t4, $t4, $t3		#calculate the location of the address which needs its count updated
 		lb $t5, 0($t4)			#load the number already in the address
-		addi $t5, 1			#add one to the value in the array
+		addi $t5, $t5, 1		#add one to the value in the array
 		sb $t5, 0($t4)			#store the 
 		sll $t1, $t1, 4			#move the bitmask
-		addi $t2, 4			#update the counter by 4 for shifting in the next iteration
+		addi $t2, $t2, 4			#update the counter by 4 for shifting in the next iteration
 		j whilePDC
 	
 	exitPDCStack:
 	#create a loop that prints the values starting with base location +15 to the zero-th location
+	li $t2, 16
+	whilePrint:
+	beqz $t2, exitPrint
+		addi $t2, $t2, -1	#reduce the value of t2 by 1 every loop
+		#srlv $t3, $t3, $t2		#shift t3 right by t2's value
+		la $t4, array			#load the base address of the array
+		add $t4, $t4, $t2		#calculate the location of the address which needs its count updated
+		lb $t5, 0($t4)			#load the number already in the address
+		
+		li $v0, 1
+		move $a0, $t5
+		syscall
+		
+		j whilePrint
+		
+		
 	
+	exitPrint:
 	#pull the return address from the stack
 	lw $ra, 0($sp)
 	addi $sp, $sp, 4
