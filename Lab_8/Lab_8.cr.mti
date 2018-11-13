@@ -1,15 +1,1 @@
-D:/Mars/Projects/Lab_8/Lab_8.sv {1 {vlog -work work -sv -stats=none D:/Mars/Projects/Lab_8/Lab_8.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module divideby3FSM
 
-Top level modules:
-	divideby3FSM
-
-} {} {}} D:/Mars/Projects/Lab_8/EEL4768-Lab8-tb.sv {1 {vlog -work work -sv -stats=none D:/Mars/Projects/Lab_8/EEL4768-Lab8-tb.sv
-Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
--- Compiling module testbench1
-
-Top level modules:
-	testbench1
-
-} {} {}}

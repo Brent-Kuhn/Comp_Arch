@@ -1,0 +1,20 @@
+module alu(input  logic [31:0] a, b, input  logic [2:0]  f, output logic [31:0] y, output logic zero);
+	wire [31:0] AorB;
+	wire [31:0] AandB;
+	wire [31:0] Mux1;
+	wire [31:0] Mux2;
+	wire [31:0] Sum;
+	wire [31:0] NegB;
+	wire [31:0] MuxB;
+	wire [31:0] AdderOut;
+	assign AorB = a | b;
+	assign AandB = a & b;
+	assign Mux1 = (f[0] == 1) ? AorB : AandB;
+	assign NegB = ~b + 1;
+	assign MuxB = (f[2] == 1) ? NegB : b;
+	assign AdderOut = a + MuxB;
+	assign Mux2 = (f[1] == 1) ? AdderOut : Mux1;
+	assign Sum = (&f == 1) ? Mux2[31] : Mux2;
+	assign y = Sum;
+	assign zero = (Sum == 0) ? 1 : 0;
+endmodule
