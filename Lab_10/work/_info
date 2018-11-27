@@ -1,0 +1,418 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Mars/Projects/Lab_9
+vadder
+Z0 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z1 !s110 1543332693
+!i10b 1
+!s100 KV72>L7aJMElHnodf?P050
+IhLEY[HTSL=3gW`5J[KZ@h1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 !s105 mipsparts_sv_unit
+S1
+Z4 dD:/Mars/Projects/Lab_10
+Z5 w1543331320
+Z6 8D:/Mars/Projects/Lab_10/mipsparts.sv
+Z7 FD:/Mars/Projects/Lab_10/mipsparts.sv
+L0 27
+Z8 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z9 !s108 1543332693.000000
+Z10 !s107 D:/Mars/Projects/Lab_10/mipsparts.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Mars/Projects/Lab_10/mipsparts.sv|
+!s101 -O0
+!i113 1
+Z12 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+valu
+R0
+Z13 !s110 1543332692
+!i10b 1
+!s100 VW[4z8fjFhR`C516FAgN02
+IjnHJYHfR=i8TOFJT5XJmk2
+R2
+!s105 ALU_sv_unit
+S1
+R4
+w1542724053
+8D:/Mars/Projects/Lab_10/ALU.sv
+FD:/Mars/Projects/Lab_10/ALU.sv
+L0 1
+R8
+r1
+!s85 0
+31
+Z14 !s108 1543332692.000000
+!s107 D:/Mars/Projects/Lab_10/ALU.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Mars/Projects/Lab_10/ALU.sv|
+!s101 -O0
+!i113 1
+R12
+valudec
+R0
+R13
+!i10b 1
+!s100 L<WUc>8DflBK3DkY?fDmf2
+Ij4>1=mmD;KgcLL@jAmRF[0
+R2
+Z15 !s105 mips_sv_unit
+S1
+R4
+R5
+Z16 8D:/Mars/Projects/Lab_10/mips.sv
+Z17 FD:/Mars/Projects/Lab_10/mips.sv
+L0 82
+R8
+r1
+!s85 0
+31
+R14
+Z18 !s107 D:/Mars/Projects/Lab_10/mips.sv|
+Z19 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Mars/Projects/Lab_10/mips.sv|
+!s101 -O0
+!i113 1
+R12
+vcontroller
+R0
+R13
+!i10b 1
+!s100 OM05USbgB282ozZSeX5M12
+IH>OU][z21W1Hfbh^Y`GDE2
+R2
+R15
+S1
+R4
+R5
+R16
+R17
+L0 38
+R8
+r1
+!s85 0
+31
+R14
+R18
+R19
+!s101 -O0
+!i113 1
+R12
+vdatapath
+R0
+R13
+!i10b 1
+!s100 MK79iKXjYb?RQCgU]:oj@0
+If>4g^TVM?jPREEk?]SEQn0
+R2
+R15
+S1
+R4
+R5
+R16
+R17
+L0 101
+R8
+r1
+!s85 0
+31
+R14
+R18
+R19
+!s101 -O0
+!i113 1
+R12
+vdmem
+R0
+R1
+!i10b 1
+!s100 d=RVRLbK_claUQ[42e:Ui0
+I:LSJ]fGbG_F;cN5HOVFJK3
+R2
+Z20 !s105 mipsmem_sv_unit
+S1
+R4
+R5
+Z21 8D:/Mars/Projects/Lab_10/mipsmem.sv
+Z22 FD:/Mars/Projects/Lab_10/mipsmem.sv
+L0 8
+R8
+r1
+!s85 0
+31
+R9
+Z23 !s107 D:/Mars/Projects/Lab_10/mipsmem.sv|
+Z24 !s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Mars/Projects/Lab_10/mipsmem.sv|
+!s101 -O0
+!i113 1
+R12
+vflopenr
+R0
+R1
+!i10b 1
+!s100 M7FgLfiT>lJjhmOWD[?g90
+IV^l0Pi]dYKzEaKU8ceTJ^3
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 56
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vflopr
+R0
+R1
+!i10b 1
+!s100 >Hg3[B>PQDH6H023DjhHG2
+IDED`GAhhcR9LW1Lg;WUDF2
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 46
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vimem
+R0
+R1
+!i10b 1
+!s100 PP`K486HhGhj]5InfOT^N2
+Iczc<U>;@=cfWLTjog[::=3
+R2
+R20
+S1
+R4
+R5
+R21
+R22
+L0 21
+R8
+r1
+!s85 0
+31
+R9
+R23
+R24
+!s101 -O0
+!i113 1
+R12
+vmaindec
+R0
+R13
+!i10b 1
+!s100 JGe<<0[5<Y1NBhQDcH7RU0
+I=B:BTk3hz=OGBJH>V1bRY2
+R2
+R15
+S1
+R4
+R5
+R16
+R17
+L0 57
+R8
+r1
+!s85 0
+31
+R14
+R18
+R19
+!s101 -O0
+!i113 1
+R12
+vmips
+R0
+R13
+!i10b 1
+!s100 3?>Ym8VE^fO?m_@ej6hl20
+I[dg0K5LMTDW0b9267@Em`0
+R2
+R15
+S1
+R4
+R5
+R16
+R17
+L0 15
+R8
+r1
+!s85 0
+31
+R14
+R18
+R19
+!s101 -O0
+!i113 1
+R12
+vmux2
+R0
+R1
+!i10b 1
+!s100 Xeh=hRXHYMQ2f2:nO4F?n2
+Ig[`O46i9DMJAgMbjLYKJY1
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 67
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vregfile
+R0
+R1
+!i10b 1
+!s100 SbCkEb43?ULAccg6]=ToG2
+IH2FU;E^:Gz;nCO<@];LRJ0
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vsignext
+R0
+R1
+!i10b 1
+!s100 iQ_GGWHc1Qon=f<NCG40>1
+I@jPB5DjBWn1OMAk;WJzV73
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 40
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vsl2
+R0
+R1
+!i10b 1
+!s100 D?U:g3emA]SfhP1WXi7[b1
+Ijcg>JFb?Yzd8?3E6Pnk>83
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 33
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vtestbench
+R0
+R1
+!i10b 1
+!s100 4NmkL@U1nNeMPeHR:HGW=1
+IiWQ>]:F@?fG?CJ7@112lX3
+R2
+!s105 mipstest_sv_unit
+S1
+R4
+R5
+8D:/Mars/Projects/Lab_10/mipstest.sv
+FD:/Mars/Projects/Lab_10/mipstest.sv
+L0 7
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/Mars/Projects/Lab_10/mipstest.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Mars/Projects/Lab_10/mipstest.sv|
+!s101 -O0
+!i113 1
+R12
+vtop
+R0
+R13
+!i10b 1
+!s100 hcSUz3PdiA?5I275[L_LD0
+IF46WA@=QlOj9D^H>mNkKh1
+R2
+!s105 mipstop_sv_unit
+S1
+R4
+R5
+8D:/Mars/Projects/Lab_10/mipstop.sv
+FD:/Mars/Projects/Lab_10/mipstop.sv
+L0 7
+R8
+r1
+!s85 0
+31
+R14
+!s107 D:/Mars/Projects/Lab_10/mipstop.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/Mars/Projects/Lab_10/mipstop.sv|
+!s101 -O0
+!i113 1
+R12
